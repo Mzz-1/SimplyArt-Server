@@ -22,11 +22,13 @@ const corsOptions = {
 
 const app = express();
 
+const allowedOrigins = ['http://localhost:3000', 'https://simply-art.vercel.app/'];
+
 // middleware
 app.use(cors());
 
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: allowedOrigins, 
 }));
 
 app.use(express.json());
