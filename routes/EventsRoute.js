@@ -8,7 +8,7 @@ const multer = require("multer");
 const sendEventsEmail = require("../Utils/SendInBlue");
 const User = require("../models/User");
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: null });
 
 const addEvents = {
     path: "/api/events",

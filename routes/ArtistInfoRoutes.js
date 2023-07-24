@@ -7,7 +7,7 @@ const { Artist, Exhibition } = require("../models/Artist");
 const Product = require("../models/Products");
 const multer = require("multer");
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: null });
 
 const getArtistProduct = {
     path: "/api/artist-products/:id",

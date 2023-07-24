@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const Product = require("../models/Products");
 const multer = require("multer");
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: null });
 
 const getAllProducts = {
     path: "/api/products",
