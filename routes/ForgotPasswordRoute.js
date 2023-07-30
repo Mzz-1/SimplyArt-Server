@@ -22,7 +22,7 @@ handler:async(req,res)=>{
                 subject:"Password Reset",
                 text:`
                     To reset your password, click this link:
-                    http://localhost:3000/reset-password/${passwordResetCode}
+                    https://simply-art.vercel.app/reset-password/${passwordResetCode}
                 `
             })
         }

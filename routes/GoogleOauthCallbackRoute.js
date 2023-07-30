@@ -19,7 +19,7 @@ const googleOauthCallbackRoute = {
                     console.log(err,"error")
                     return res.sendStatus(500);
                 }
-                res.redirect(`http://localhost:3000/login?token=${token}`);
+                res.redirect(`https://simply-art.vercel.app/login?token=${token}`);
             }
         );
     },

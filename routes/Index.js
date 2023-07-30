@@ -45,7 +45,6 @@ const {
     getEvent,
     updateEvents,
     deleteEvent,
-    sendEventMail,
 } = require("./EventsRoute");
 
 const {
