@@ -39,7 +39,7 @@ const signUpRoute = {
                 subject: "Please verify your email",
                 text: `
                     Thank you for signing up! To verify your email,click here:
-                    http://localhost:3000/verify-email/${verificationString}
+                    https://simply-art.vercel.app/verify-email/${verificationString}
                 `,
             });
 

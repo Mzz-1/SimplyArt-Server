@@ -13,7 +13,6 @@ const router = express.Router();
 const cors = require("cors");
 const multer = require("multer");
 
-
 const corsOptions = {
     origin: "http://localhost:3000",
     credentials: true,
@@ -22,14 +21,19 @@ const corsOptions = {
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:3000', 'https://simply-art.vercel.app/'];
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://simply-art.vercel.app/",
+];
 
 // middleware
 app.use(cors());
 
-app.use(cors({
-  origin: allowedOrigins, 
-}));
+app.use(
+    cors({
+        origin: allowedOrigins,
+    })
+);
 
 app.use(express.json());
 app.use(bodyParser.json({ limit: "50mb" }));
@@ -39,7 +43,6 @@ routes.forEach((route) => {
     app[route.method](route.path, route.handler);
 });
 
-
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 app.use(
@@ -47,9 +50,6 @@ app.use(
         useTempFiles: true,
     })
 );
-
-
-
 
 const port = process.env.PORT || 5000;
 

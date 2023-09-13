@@ -22,6 +22,7 @@ const updateOrCreateFromOauth = async ({ oauthUserInfo }) => {
         return result;
     } else {
         const result = await User.create({
+            username: email,
             email,
             googleId,
             isVerified,
